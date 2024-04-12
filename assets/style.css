@@ -88,6 +88,7 @@ body {
 #about-me p {
 	width: 80%;
 	font-size: 14px;
+	display: block; /* Assurez-vous que la section est toujours affichée en bloc */
 }
 
 #gallery {
