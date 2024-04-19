@@ -120,10 +120,6 @@ body {
 	padding-bottom: 100%;
 
 }
-.gallery {
-	display: grid;
-	grid-gap: 20px; /* Ajoutez ici la valeur de padding que vous souhaitez */
-}
 
 .gallery-item {
 	position: absolute;
