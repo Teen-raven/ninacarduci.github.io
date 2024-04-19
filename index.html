@@ -254,6 +254,27 @@
     <script src="./assets/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="./assets/maugallery.js"></script>
     <script src="./assets/scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const carousel = document.querySelector('#carouselExampleIndicators');
+            const ampImages = carousel.querySelectorAll('amp-img');
+        
+            // Fonction pour forcer la mise à jour du layout AMP
+            function updateAmpLayout() {
+                ampImages.forEach(function (img) {
+                    img.getImpl().then(function (ampImg) {
+                        ampImg.layoutCallback();
+                    });
+                });
+            }
+        
+            // Écouter l'événement de changement de diapositive
+            carousel.addEventListener('slid.bs.carousel', updateAmpLayout);
+        
+            // Appeler la fonction initiale pour s'assurer que le layout est correct dès le début
+            updateAmpLayout();
+        });
+        </script>
 </body>
 
 </html>
