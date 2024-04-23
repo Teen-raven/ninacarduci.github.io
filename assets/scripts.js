@@ -13,8 +13,3 @@ $(document).ready(function() {
         tagsPosition: 'top'
     });
 });
-var myCarousel = document.querySelector('#carouselExampleIndicators')
-var carousel = new bootstrap.Carousel(myCarousel, {
-  interval: 2000, // ajustez la durée si nécessaire
-  wrap: true
-})
